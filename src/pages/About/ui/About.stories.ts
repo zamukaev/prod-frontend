@@ -4,8 +4,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { AboutPage } from '..';
 
-
-
 const meta = {
     title: 'pages/AboutPage',
     component: AboutPage,
