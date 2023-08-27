@@ -6,7 +6,6 @@ export interface BuildPath {
     html: string;
     src: string;
 }
-
 export interface BuildOptions {
     mode: BuildMode;
     paths: BuildPath;

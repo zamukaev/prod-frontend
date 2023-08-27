@@ -10,6 +10,11 @@ function buildWebpackConfig(options: BuildOptions): Configuration {
     const { mode, paths, isDev } = options;
     return {
         mode,
+        performance: {
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000,
+        },
         entry: paths.entry,
         output: {
             filename: '[name].[contenthash].js',
