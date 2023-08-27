@@ -19,7 +19,12 @@ function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
             __IS_DEV__: JSON.stringify(isDev),
         }),
         isDev && new ReactRefreshWebpackPlugin(),
-        new BundleAnalyzerPlugin({ openAnalyzer: false }),
+
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+            analyzerMode: isDev ? 'server' : 'disabled',
+        }),
+
     ].filter(Boolean);
 }
 
