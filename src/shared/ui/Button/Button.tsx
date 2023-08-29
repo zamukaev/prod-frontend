@@ -5,23 +5,38 @@ import styles from './Button.module.scss';
 export enum ThemeButton {
     CLEAR = 'clear',
     OUTLINE = 'outline',
+    BACKGROUND = 'background',
+    BACKGROUND_INVERTED = 'backgroundInverted'
+}
+
+export enum ButtonSize {
+    M = 'size_m',
+    L = 'size_l',
+    XL = 'size_xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ThemeButton;
-    onClick?: () => void;
+    square?: boolean;
+    size?: ButtonSize;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
-        className, onClick, theme, children, ...otherProps
+        className, theme, square, size, children, ...otherProps
     } = props;
+
+    const mods: Record<string, boolean> = {
+        [styles.square]: square,
+    };
+
     return (
         <button
-            onClick={onClick}
             type="button"
-            className={classNames(styles.Button, {}, [className, styles[theme]])}
+            className={
+                classNames(styles.Button, mods, [className, styles[theme], styles[size]])
+            }
             {...otherProps}
         >
             {children}

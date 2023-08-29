@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ThemeButton } from './Button';
 
 const meta = {
     title: 'shared/Button',
@@ -32,6 +32,20 @@ export const Outline: Story = {
         children: 'Button',
     },
 };
+export const OutlineSizeL: Story = {
+    args: {
+        theme: ThemeButton.OUTLINE,
+        children: 'Button',
+        size: ButtonSize.L,
+    },
+};
+export const OutlineSizeXL: Story = {
+    args: {
+        theme: ThemeButton.OUTLINE,
+        children: 'Button',
+        size: ButtonSize.XL,
+    },
+};
 export const OutlineDark: Story = {
     args: {
         theme: ThemeButton.OUTLINE,
@@ -40,4 +54,22 @@ export const OutlineDark: Story = {
     decorators: [
         ThemeDecorator(Theme.DARK),
     ],
+};
+export const BackgroundTheme: Story = {
+    args: {
+        theme: ThemeButton.BACKGROUND,
+        children: 'Button',
+    },
+};
+export const BackgroundInverted: Story = {
+    args: {
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        children: 'Button',
+    },
+};
+export const Square: Story = {
+    args: {
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        children: '>',
+    },
 };

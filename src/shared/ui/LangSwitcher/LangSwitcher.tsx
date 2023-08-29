@@ -5,10 +5,11 @@ import classNames from 'shared/lib/classNames/classNames';
 
 interface LangSwitcherProps {
     className?: string;
+    sort?: boolean;
 }
 
 export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
-    const { className } = props;
+    const { className, sort } = props;
     const { t, i18n } = useTranslation();
     const toggleLang = () => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'ne' : 'ru');
@@ -20,7 +21,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
             onClick={toggleLang}
             className={classNames('', {}, [className])}
         >
-            {t('Язык')}
+            {t(sort ? 'Короткий язык' : 'Язык')}
         </Button>
     );
 };
