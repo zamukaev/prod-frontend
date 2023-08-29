@@ -12,7 +12,8 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "chromatic": "npx chromatic --project-token=chpt_b5ddf8887edc515",
+    "ui:test": "npx chromatic --project-token=chpt_b5ddf8887edc515",
+    "ui:test:ok": "npx chromatic --auto-accept-changes --project-token=chpt_b5ddf8887edc515",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook"
   },
@@ -91,5 +92,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.3",
     "react-router-dom": "^6.14.2"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "production-frontend@1.0.0"
 }
