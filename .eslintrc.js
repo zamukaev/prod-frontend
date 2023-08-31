@@ -37,7 +37,7 @@ module.exports = {
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'no-undef': 'off',
-        'linebreak-style': ['error', 'windows'],
+        'linebreak-style': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'react/jsx-uses-react': 2,
