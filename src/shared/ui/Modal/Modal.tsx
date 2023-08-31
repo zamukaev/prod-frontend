@@ -8,7 +8,6 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { Portal } from '../Portal/Portal';
 import styles from './Modal.module.scss';
 
-
 interface ModalProps {
   className?: string;
   children?: ReactNode;

@@ -28,5 +28,5 @@ export const ModalDark: Story = {
   },
   decorators: [
     ThemeDecorator(Theme.DARK),
-  ]
+  ],
 };
