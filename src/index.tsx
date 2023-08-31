@@ -12,11 +12,11 @@ import 'shared/config/i18n/i18n';
 const root = document.querySelector('#root');
 
 ReactDOM.createRoot(root).render(
-    <BrowserRouter>
-        <ErrorBoundary>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
-        </ErrorBoundary>
-    </BrowserRouter>,
+  <BrowserRouter>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
+  </BrowserRouter>,
 );

@@ -14,5 +14,9 @@
     "stylelint.config": null,
     "cSpell.words": [
         "linebreak"
-    ]
+    ],
+    "javascript.format.enable": true,
+    "javascript.format.insertSpaceAfterCommaDelimiter": true,
+    "eslint.codeActionsOnSave.mode": "problems",
+    "eslint.codeActionsOnSave.rules": true
 }

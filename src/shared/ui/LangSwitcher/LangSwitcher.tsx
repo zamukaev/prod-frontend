@@ -9,19 +9,19 @@ interface LangSwitcherProps {
 }
 
 export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
-    const { className, sort } = props;
-    const { t, i18n } = useTranslation();
-    const toggleLang = () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'ne' : 'ru');
-    };
+  const { className, sort } = props;
+  const { t, i18n } = useTranslation();
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === 'ru' ? 'ne' : 'ru');
+  };
 
-    return (
-        <Button
-            theme={ThemeButton.CLEAR}
-            onClick={toggleLang}
-            className={classNames('', {}, [className])}
-        >
-            {t(sort ? 'Короткий язык' : 'Язык')}
-        </Button>
-    );
+  return (
+    <Button
+      theme={ThemeButton.CLEAR}
+      onClick={toggleLang}
+      className={classNames('', {}, [className])}
+    >
+      {t(sort ? 'Короткий язык' : 'Язык')}
+    </Button>
+  );
 };

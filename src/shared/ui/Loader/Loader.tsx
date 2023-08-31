@@ -7,14 +7,14 @@ interface LoaderProps {
 }
 
 export const Loader: FC<LoaderProps> = (props) => {
-    const { className } = props;
+  const { className } = props;
 
-    return (
-        <div className={classNames(styles['lds-ellipsis'], {}, [className])}>
-            <div />
-            <div />
-            <div />
-            <div />
-        </div>
-    );
+  return (
+    <div className={classNames(styles['lds-ellipsis'], {}, [className])}>
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+  );
 };
