@@ -9,10 +9,10 @@ import { Portal } from '../Portal/Portal';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
-  className?: string;
-  children?: ReactNode;
-  isOpen?: boolean;
-  onClose?: () => void;
+    className?: string;
+    children?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
 }
 export const ANIMATION_DELAY = 200;
 export const Modal: FC<ModalProps> = (props) => {
@@ -61,7 +61,7 @@ export const Modal: FC<ModalProps> = (props) => {
 
     return (
         <Portal>
-            <div className={classNames(styles.Modal, mods, [className, styles[theme]])}>
+            <div className={classNames(styles.Modal, mods, [className])}>
                 <div className={styles.overlay} onClick={closeHandler}>
                     <div className={styles.content} onClick={onContentClick}>
                         {children}

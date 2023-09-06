@@ -10,7 +10,7 @@ import { Modal } from 'shared/ui/Modal/Modal';
 function App() {
     const { theme } = useTheme();
     return (
-        <div className={classNames('app', { hover: true }, [theme])}>
+        <div className={classNames('app', { hover: true }, [])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
