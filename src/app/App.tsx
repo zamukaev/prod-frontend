@@ -8,18 +8,18 @@ import classNames from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
 
 function App() {
-  const { theme } = useTheme();
-  return (
-    <div className={classNames('app', { hover: true }, [theme])}>
-      <Suspense fallback="">
-        <Navbar />
-        <div className="content-page">
-          <Sidebar />
-          <AppRouter />
+    const { theme } = useTheme();
+    return (
+        <div className={classNames('app', { hover: true }, [theme])}>
+            <Suspense fallback="">
+                <Navbar />
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
-      </Suspense>
-    </div>
-  );
+    );
 }
 
 export default App;

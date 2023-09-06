@@ -8,17 +8,17 @@ interface PageErrorProps {
 }
 
 export const PageError: FC<PageErrorProps> = (props) => {
-  const { className } = props;
+    const { className } = props;
 
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  const reloadPage = () => {
-    window.location.reload();
-  };
-  return (
-    <div className={classNames(styles.PageError, {}, [className])}>
-      {t('Произошла не ожиданная ошибка!')}
-      <button onClick={reloadPage} type="button">{t('Обнавить страницу')}</button>
-    </div>
-  );
+    const reloadPage = () => {
+        window.location.reload();
+    };
+    return (
+        <div className={classNames(styles.PageError, {}, [className])}>
+            {t('Произошла не ожиданная ошибка!')}
+            <button onClick={reloadPage} type="button">{t('Обнавить страницу')}</button>
+        </div>
+    );
 };

@@ -5,8 +5,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { MainPage } from '..';
 
 const meta = {
-  title: 'pages/MainPage',
-  component: MainPage,
+    title: 'pages/MainPage',
+    component: MainPage,
 } satisfies Meta<typeof MainPage>;
 
 export default meta;
@@ -14,12 +14,12 @@ export default meta;
 export type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {},
+    args: {},
 };
 
 export const Dark: Story = {
-  args: {},
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+    ],
 };

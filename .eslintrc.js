@@ -24,9 +24,9 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
-        // 'react/jsx-indent': [2, 4],
-        // 'react/jsx-indent-props': [2, 4],
-        // indent: [2, 4],
+        'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        indent: [2, 4],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -47,6 +47,7 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+        'no-param-reassign': 'off',
     },
     globals: {
         __IS_DEV__: true,

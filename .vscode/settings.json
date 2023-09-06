@@ -13,7 +13,8 @@
     ],
     "stylelint.config": null,
     "cSpell.words": [
-        "linebreak"
+        "linebreak",
+        "инкремент"
     ],
     "javascript.format.enable": true,
     "javascript.format.insertSpaceAfterCommaDelimiter": true,

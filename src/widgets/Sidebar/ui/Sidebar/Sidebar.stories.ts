@@ -5,8 +5,8 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Sidebar } from './Sidebar';
 
 const meta = {
-  title: 'widget/Sidebar',
-  component: Sidebar,
+    title: 'widget/Sidebar',
+    component: Sidebar,
 
 } satisfies Meta<typeof Sidebar>;
 
@@ -15,12 +15,12 @@ export default meta;
 export type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {},
+    args: {},
 };
 
 export const Dark: Story = {
-  args: {},
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+    ],
 };

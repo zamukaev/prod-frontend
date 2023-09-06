@@ -5,8 +5,8 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Modal } from './Modal';
 
 const meta = {
-  title: 'shared/Modal',
-  component: Modal,
+    title: 'shared/Modal',
+    component: Modal,
 
 } satisfies Meta<typeof Modal>;
 
@@ -15,18 +15,18 @@ export default meta;
 export type Story = StoryObj<typeof meta>;
 
 export const ModalLight: Story = {
-  args: {
-    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Enim consectetur aperiam voluptate modi nesciunt hic distinctio facere porro illo assumenda, deserunt odit earum eligendi corrupti voluptas doloremque deleniti, minima ex?',
-    isOpen: true,
-  },
+    args: {
+        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Enim consectetur aperiam voluptate modi nesciunt hic distinctio facere porro illo assumenda, deserunt odit earum eligendi corrupti voluptas doloremque deleniti, minima ex?',
+        isOpen: true,
+    },
 };
 
 export const ModalDark: Story = {
-  args: {
-    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Enim consectetur aperiam voluptate modi nesciunt hic distinctio facere porro illo assumenda, deserunt odit earum eligendi corrupti voluptas doloremque deleniti, minima ex?',
-    isOpen: true,
-  },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+    args: {
+        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Enim consectetur aperiam voluptate modi nesciunt hic distinctio facere porro illo assumenda, deserunt odit earum eligendi corrupti voluptas doloremque deleniti, minima ex?',
+        isOpen: true,
+    },
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+    ],
 };

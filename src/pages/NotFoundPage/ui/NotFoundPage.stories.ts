@@ -5,8 +5,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { NotFoundPage } from '..';
 
 const meta = {
-  title: 'pages/NotFoundPage',
-  component: NotFoundPage,
+    title: 'pages/NotFoundPage',
+    component: NotFoundPage,
 } satisfies Meta<typeof NotFoundPage>;
 
 export default meta;
@@ -14,12 +14,12 @@ export default meta;
 export type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {},
+    args: {},
 };
 
 export const Dark: Story = {
-  args: {},
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+    ],
 };

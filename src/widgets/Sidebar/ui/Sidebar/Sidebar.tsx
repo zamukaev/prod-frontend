@@ -17,64 +17,64 @@ interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = (props) => {
-  const { className } = props;
-  const [collapsed, setCollapsed] = useState<boolean>(false);
-  const { t } = useTranslation();
+    const { className } = props;
+    const [collapsed, setCollapsed] = useState<boolean>(false);
+    const { t } = useTranslation();
 
-  const onToggle = () => {
-    setCollapsed((prev) => !prev);
-  };
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
 
-  return (
-    <div
-      data-testid="sidebar"
-      className={
-        classNames(
-          styles.Sidebar,
-          { [styles.collapsed]: collapsed },
-          [className],
-        )
-      }
-    >
-
-      <Button
-        data-testid="toggle-btn"
-        onClick={onToggle}
-        className={styles.collapsedBtn}
-        theme={ThemeButton.BACKGROUND_INVERTED}
-        square
-        size={ButtonSize.L}
-      >
-        {collapsed ? '>' : '<'}
-      </Button>
-      <div className={styles.items}>
-        <AppLink
-          theme={AppLinkTheme.PRIMARY}
-          className={styles.item}
-          to={RoutePath.main}
+    return (
+        <div
+            data-testid="sidebar"
+            className={
+                classNames(
+                    styles.Sidebar,
+                    { [styles.collapsed]: collapsed },
+                    [className],
+                )
+            }
         >
-          <MainIcon className={styles.icon} />
-          <span className={styles.link}>
-            {t('Главная страница')}
-          </span>
 
-        </AppLink>
-        <AppLink
-          theme={AppLinkTheme.PRIMARY}
-          className={styles.item}
-          to={RoutePath.about}
-        >
-          <AboutIcon className={styles.icon} />
-          <span className={styles.link}>
-            {t('О сайте')}
-          </span>
+            <Button
+                data-testid="toggle-btn"
+                onClick={onToggle}
+                className={styles.collapsedBtn}
+                theme={ThemeButton.BACKGROUND_INVERTED}
+                square
+                size={ButtonSize.L}
+            >
+                {collapsed ? '>' : '<'}
+            </Button>
+            <div className={styles.items}>
+                <AppLink
+                    theme={AppLinkTheme.PRIMARY}
+                    className={styles.item}
+                    to={RoutePath.main}
+                >
+                    <MainIcon className={styles.icon} />
+                    <span className={styles.link}>
+                        {t('Главная страница')}
+                    </span>
 
-        </AppLink>
-      </div>
-      <div className={styles.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher sort={collapsed} className={styles.lang} />
-      </div>
-    </div>
-  );
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.PRIMARY}
+                    className={styles.item}
+                    to={RoutePath.about}
+                >
+                    <AboutIcon className={styles.icon} />
+                    <span className={styles.link}>
+                        {t('О сайте')}
+                    </span>
+
+                </AppLink>
+            </div>
+            <div className={styles.switchers}>
+                <ThemeSwitcher />
+                <LangSwitcher sort={collapsed} className={styles.lang} />
+            </div>
+        </div>
+    );
 };

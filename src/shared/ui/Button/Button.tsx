@@ -24,23 +24,23 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const {
-    className, theme, square, size, children, ...otherProps
-  } = props;
+    const {
+        className, theme, square, size, children, ...otherProps
+    } = props;
 
-  const mods: Record<string, boolean> = {
-    [styles.square]: square,
-  };
+    const mods: Record<string, boolean> = {
+        [styles.square]: square,
+    };
 
-  return (
-    <button
-      type="button"
-      className={
-        classNames(styles.Button, mods, [className, styles[theme], styles[size]])
-      }
-      {...otherProps}
-    >
-      {children}
-    </button>
-  );
+    return (
+        <button
+            type="button"
+            className={
+                classNames(styles.Button, mods, [className, styles[theme], styles[size]])
+            }
+            {...otherProps}
+        >
+            {children}
+        </button>
+    );
 };
