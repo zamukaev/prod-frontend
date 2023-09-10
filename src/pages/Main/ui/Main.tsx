@@ -1,28 +1,19 @@
-import { Counter } from 'entities/Counter';
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button/Button';
+
+import { Input } from 'shared/ui/Input/Input';
 
 const Main: FC = () => {
     const { t } = useTranslation('main');
-    const [error, setError] = useState(false);
+    const [value, setValue] = useState('');
 
-    const errorThow = () => {
-        setError(true);
+    const changeHandler = (val: string) => {
+        setValue(val);
     };
-
-    useEffect(() => {
-        if (error) {
-            throw new Error();
-        }
-    }, [error]);
-
     return (
         <div>
             {t('Главная страница')}
-            <Button onClick={errorThow}>{t('Throw error')}</Button>
-
-            <Counter />
+            <Input value={value} placeholder="name" onChange={changeHandler} />
         </div>
     );
 };
