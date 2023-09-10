@@ -25,12 +25,16 @@ export const Modal: FC<ModalProps> = (props) => {
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isOpening, setIsOpening] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
     useEffect(() => {
         if (isOpen) {
             setIsMounted(true);
+            timerRef.current = setTimeout(() => {
+                setIsOpening(true);
+            }, ANIMATION_DELAY);
         }
     }, [isOpen]);
 
@@ -39,6 +43,7 @@ export const Modal: FC<ModalProps> = (props) => {
             setIsClosing(true);
             timerRef.current = setTimeout(() => {
                 onClose();
+                setIsOpening(false);
                 setIsClosing(false);
                 setIsMounted(false);
             }, ANIMATION_DELAY);
@@ -58,6 +63,7 @@ export const Modal: FC<ModalProps> = (props) => {
     const mods: Record<string, boolean> = {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing,
+        [styles.isOpening]: isOpening,
     };
 
     useEffect(() => {

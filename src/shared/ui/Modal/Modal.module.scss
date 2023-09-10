@@ -27,7 +27,7 @@
 }
 
 
-.opened{
+.isOpening{
     pointer-events: auto;
     opacity: 1; 
     z-index: var(--modal-z-index);
@@ -35,7 +35,7 @@
     .content{
         transform: scale(1);
       
-    }
+    } 
 
    
 }
@@ -45,3 +45,4 @@
         transform: scale(0.2);
     }
 }
+
