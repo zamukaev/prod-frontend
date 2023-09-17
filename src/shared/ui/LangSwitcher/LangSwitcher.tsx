@@ -12,7 +12,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
     const { className, sort } = props;
     const { t, i18n } = useTranslation();
     const toggleLang = () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'ne' : 'ru');
+        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
     return (
