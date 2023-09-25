@@ -79,3 +79,10 @@ export const Square: Story = {
         children: '>',
     },
 };
+export const Disabled: Story = {
+    args: {
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        children: '>',
+        disabled: true,
+    },
+};
