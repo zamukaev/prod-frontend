@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { LoginForm } from './LoginForm';
+import LoginForm from './LoginForm';
 
 const meta = {
     title: 'features/LoginForm',
@@ -22,6 +22,8 @@ export const LoginFormLight: Story = {
                 error: '',
                 isLoading: false,
             },
+            counter: undefined,
+            user: undefined,
         }),
     ],
 };
@@ -35,6 +37,8 @@ export const LoginFormWithError: Story = {
                 error: 'error',
                 isLoading: false,
             },
+            counter: undefined,
+            user: undefined,
         }),
     ],
 };
@@ -48,6 +52,8 @@ export const LoginFormLoading: Story = {
                 error: '',
                 isLoading: true,
             },
+            counter: undefined,
+            user: undefined,
         }),
     ],
 };

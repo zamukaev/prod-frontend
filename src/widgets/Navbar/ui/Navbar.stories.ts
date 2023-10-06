@@ -20,6 +20,7 @@ export const Light: Story = {
     decorators: [
         StoreDecorator({
             user: { authData: undefined },
+            counter: { value: 0 },
         }),
     ],
 };
@@ -30,6 +31,7 @@ export const Dark: Story = {
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
             user: { authData: undefined },
+            counter: { value: 0 },
         }),
     ],
 };
@@ -39,6 +41,7 @@ export const WithAuth: Story = {
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
             user: { authData: { id: '13', username: 'dsfsd' } },
+            counter: { value: 0 },
         }),
     ],
 };
