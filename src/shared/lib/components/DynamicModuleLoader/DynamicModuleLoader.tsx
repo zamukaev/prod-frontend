@@ -11,7 +11,6 @@ export type ReducerList = {
 export type ReducerListEntry = [StateSchemaKey, Reducer];
 
 interface DynamicModuleLoaderProps {
-    name?: StateSchemaKey;
     reducers?: ReducerList;
     removeAfterUnmount?: boolean;
 }
