@@ -10,14 +10,15 @@ import 'app/styles/index.scss';
 
 const root = document.querySelector('#root');
 
-ReactDOM.createRoot(root).render(
-    <StoreProvider>
-        <BrowserRouter>
+ReactDOM.createRoot(root as Element).render(
+
+    <BrowserRouter>
+        <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
                 </ThemeProvider>
             </ErrorBoundary>
-        </BrowserRouter>
-    </StoreProvider>,
+        </StoreProvider>
+    </BrowserRouter>,
 );

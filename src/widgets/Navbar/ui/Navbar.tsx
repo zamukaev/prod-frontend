@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FC, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import classNames from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
@@ -8,7 +8,7 @@ import { LoginModal } from 'features/AuthByUsername';
 
 import { useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
-import { useAppDispatch } from 'shared/lib/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 import styles from './Navbar.module.scss';
 
@@ -16,7 +16,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar: FC<NavbarProps> = (props) => {
+export const Navbar = memo((props: NavbarProps) => {
     const { className } = props;
     const [isAuthModal, setIsAuthModal] = useState(false);
     const { t } = useTranslation();
@@ -52,4 +52,4 @@ export const Navbar: FC<NavbarProps> = (props) => {
             <LoginModal isOpen={isAuthModal} onClose={closeModalHandler} />
         </div>
     );
-};
+});

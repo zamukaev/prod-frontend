@@ -7,7 +7,7 @@ import { BuildOptions } from './types/config';
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
-    const { paths, isDev } = options;
+    const { paths, isDev, apiUrl } = options;
     return [
         new HtmlWebpackPlugin({ template: paths.html }),
         new MiniCssExtractPlugin({
@@ -17,6 +17,7 @@ function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
         new webpack.ProgressPlugin(),
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
         }),
         isDev && new ReactRefreshWebpackPlugin(),
 

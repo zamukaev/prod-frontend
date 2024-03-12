@@ -6,13 +6,13 @@ import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import classNames from 'shared/lib/classNames/classNames';
 
-import { useAppDispatch } from 'shared/lib/useAppDispatch/useAppDispatch';
 import { Text, ThemeText } from 'shared/ui/Text/Text';
 import { getLoginUsername } from 'features/AuthByUsername/modal/selectors/getLoginUsername';
 import { getLoginPassword } from 'features/AuthByUsername/modal/selectors/getLoginPassword';
 import { getLoginIsLoading } from 'features/AuthByUsername/modal/selectors/getLoginIsloading';
 import { getLoginError } from 'features/AuthByUsername/modal/selectors/getLoginError';
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../modal/services/loginByUsername';
 import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 
@@ -20,12 +20,13 @@ import styles from './LoginForm.module.scss';
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess?: () => void;
 }
 const initialReducers: ReducerList = {
     loginForm: loginReducer,
 };
 const LoginForm = memo((props: LoginFormProps) => {
-    const { className } = props;
+    const { className, onSuccess } = props;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
@@ -42,9 +43,12 @@ const LoginForm = memo((props: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const loginClickHandler = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const loginClickHandler = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess?.();
+        }
+    }, [onSuccess, dispatch, username, password]);
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
