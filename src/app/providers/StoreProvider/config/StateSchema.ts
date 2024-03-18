@@ -42,5 +42,6 @@ export interface ThankExtraArg {
 
 export interface ThankConfig<T> {
     rejectValue: T;
-    extra: ThankExtraArg
+    extra: ThankExtraArg;
+    state: StateSchema;
 }

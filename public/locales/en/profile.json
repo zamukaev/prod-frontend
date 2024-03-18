@@ -1,4 +1,17 @@
 {
   "Профиль": "Profile",
-  "Редактировать": "Edit"
+  "Редактировать": "Edit",
+  "Ваше Имя": "Your Name",
+  "proizoshla-oshibka-pri-zagruzke-proifilya": "An error occurred while loading your profile",
+  "poprobuite-obnovit-stranicu": "Try refreshing the page",
+  "vashe-imya": "Your name",
+  "vashe-familiya": "Your Last name",
+  "vash-vozrast": "Your age",
+  "gorod": "City",
+  "vvedite-imya-polzovatelya": "Enter your username",
+  "vvedite-vashu-avatarku": "Enter your avatar",
+  "profil": "Profile",
+  "redaktirovat": "Edit",
+  "otmenit": "Cancel",
+  "sokhranit": "Save"
 }

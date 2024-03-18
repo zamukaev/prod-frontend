@@ -1,4 +1,18 @@
 {
     "Профиль": "Профиль ползователя",
-    "Редактировать": "Редактировать"
+    "Редактировать": "Редактировать",
+    "Ваше Имя":"Ваше Имя",
+    "proizoshla-oshibka-pri-zagruzke-proifilya": "Произошла ошибка при загрузке проифиля",
+    "poprobuite-obnovit-stranicu": "Попробуйте обновить страницу",
+    "vashe-imya": "Ваше Имя",
+    "vashe-familiya": "Ваше фамилия",
+    "vash-vozrast": "Ваш возраст",
+    "gorod": "Город",
+    "vvedite-imya-polzovatelya": "Введите имя пользователя",
+    "vvedite-vashu-avatarku": "Введите вашу аватарку",
+    "profil": "Профиль",
+    "redaktirovat": "Редактировать",
+    "otmenit": "Отменить",
+    "sokhranit": "Сохранить"
+    
 }

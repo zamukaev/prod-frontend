@@ -14,5 +14,7 @@
     "Ведите username": "Enter username",
     "Ведите пароль": "Enter password",
     "Форма авторизации": "Authorization from",
+    "Выйти":"Logout",
+    "Войти":"Login",
     "Вы ввели неверный логин или пароль": "You entered an incorrect username or password"
 }
