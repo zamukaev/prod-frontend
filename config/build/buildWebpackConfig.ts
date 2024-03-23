@@ -1,4 +1,3 @@
-import path from 'path';
 import { Configuration } from 'webpack';
 import buildLoaders from './buildLoaders';
 import buildPlugins from './buildPlugins';
@@ -7,7 +6,11 @@ import { BuildOptions } from './types/config';
 import buildDevServer from './buildDevServer';
 
 function buildWebpackConfig(options: BuildOptions): Configuration {
-    const { mode, paths, isDev } = options;
+    const {
+        mode,
+        paths,
+        isDev,
+    } = options;
     return {
         mode,
         performance: {
