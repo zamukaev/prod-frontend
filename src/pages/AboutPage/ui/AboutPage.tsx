@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const About = memo(() => {
+const AboutPage = memo(() => {
     const { t } = useTranslation('about');
     return (
         <div>
@@ -10,4 +10,4 @@ const About = memo(() => {
     );
 });
 
-export default About;
+export default memo(AboutPage);
