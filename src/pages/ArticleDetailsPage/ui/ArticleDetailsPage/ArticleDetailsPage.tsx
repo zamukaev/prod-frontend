@@ -1,5 +1,8 @@
-import { FC, memo } from 'react'
+import { FC, memo } from 'react';
 import classNames from 'shared/lib/classNames/classNames';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import styles from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
@@ -8,10 +11,20 @@ interface ArticleDetailsPageProps {
 
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     const { className } = props;
+    const { id } = useParams();
+    const { t } = useTranslation('article-details');
+
+    if (!id) {
+        return (
+            <div className={classNames(styles.ArticleDetailsPage, {}, [className])}>
+                {t('statya-ne-naidena')}
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(styles.ArticleDetailsPage, {}, [className])}>
-            ARTICLE_DETAILS_PAGE
+            <ArticleDetails id={id} />
         </div>
     );
 };

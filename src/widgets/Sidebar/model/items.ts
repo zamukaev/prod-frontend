@@ -19,7 +19,6 @@ export const SidebarItemList: SidebarItemType[] = [
         Icon: MainIcon,
         text: 'Главная страница',
     },
-
     {
         path: RoutePath.about,
         Icon: AboutIcon,
